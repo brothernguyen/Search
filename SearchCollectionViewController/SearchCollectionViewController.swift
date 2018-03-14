@@ -8,24 +8,34 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "SearchCell"
 
-class SearchCollectionViewController: UICollectionViewController {
-    
+class SearchCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: UICollectionViewDataSource
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {        
         return 2
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            self.collectionView?.register(UINib(nibName: "SearchCategoryCell", bundle:nil), forCellWithReuseIdentifier: "SearchCell")
+        } else {
+            self.collectionView?.register(UINib(nibName: "SearchDateCell", bundle:nil), forCellWithReuseIdentifier: "DateCell")
+        }
         return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 0 {
+            return CGSize(width: 100, height: 120)
+        } else {
+            return CGSize(width: 375, height: 50)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -46,12 +56,12 @@ class SearchCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        if indexPath.section == 1 {
-            cell.frame.size = CGSize(width: 414, height: 50)
-            
-        }
-        
+        var cell = UICollectionViewCell()
+        if indexPath.section == 0 {
+            cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCategoryCell)!
+        } else {
+            cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "DateCell", for: indexPath) as? SearchDateCell)!
+        }        
         return cell
     }
 

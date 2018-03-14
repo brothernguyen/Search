@@ -15,6 +15,10 @@
 		685F32D52053916800A2FB89 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F32D42053916800A2FB89 /* SearchViewController.swift */; };
 		688C79A42057C7C900E5B862 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688C79A32057C7C900E5B862 /* SearchHeaderView.swift */; };
 		688C79A62057CD8F00E5B862 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688C79A52057CD8F00E5B862 /* SearchCollectionViewController.swift */; };
+		688D07F02058C80800118A9E /* SearchCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688D07EF2058C80800118A9E /* SearchCategoryCell.swift */; };
+		688D07F42058D14700118A9E /* SearchCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688D07F32058D14700118A9E /* SearchCategoryCell.xib */; };
+		688D07F92058FCE000118A9E /* SearchDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688D07F82058FCE000118A9E /* SearchDateCell.swift */; };
+		688D07FB2058FCFB00118A9E /* SearchDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688D07FA2058FCFB00118A9E /* SearchDateCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		685F32D42053916800A2FB89 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		688C79A32057C7C900E5B862 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		688C79A52057CD8F00E5B862 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
+		688D07EF2058C80800118A9E /* SearchCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCell.swift; sourceTree = "<group>"; };
+		688D07F32058D14700118A9E /* SearchCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCategoryCell.xib; sourceTree = "<group>"; };
+		688D07F82058FCE000118A9E /* SearchDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateCell.swift; sourceTree = "<group>"; };
+		688D07FA2058FCFB00118A9E /* SearchDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDateCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +83,22 @@
 		688C799E2057B75500E5B862 /* SearchCollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				688D07F72058FAF000118A9E /* SearchCollectionViewCell */,
 				688C79A52057CD8F00E5B862 /* SearchCollectionViewController.swift */,
 				688C79A32057C7C900E5B862 /* SearchHeaderView.swift */,
 			);
 			path = SearchCollectionViewController;
+			sourceTree = "<group>";
+		};
+		688D07F72058FAF000118A9E /* SearchCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				688D07EF2058C80800118A9E /* SearchCategoryCell.swift */,
+				688D07F32058D14700118A9E /* SearchCategoryCell.xib */,
+				688D07F82058FCE000118A9E /* SearchDateCell.swift */,
+				688D07FA2058FCFB00118A9E /* SearchDateCell.xib */,
+			);
+			path = SearchCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +162,9 @@
 			files = (
 				685F32CD2053915000A2FB89 /* LaunchScreen.storyboard in Resources */,
 				685F32CA2053915000A2FB89 /* Assets.xcassets in Resources */,
+				688D07F42058D14700118A9E /* SearchCategoryCell.xib in Resources */,
 				685F32C82053915000A2FB89 /* Main.storyboard in Resources */,
+				688D07FB2058FCFB00118A9E /* SearchDateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688D07F92058FCE000118A9E /* SearchDateCell.swift in Sources */,
 				685F32D52053916800A2FB89 /* SearchViewController.swift in Sources */,
 				688C79A42057C7C900E5B862 /* SearchHeaderView.swift in Sources */,
+				688D07F02058C80800118A9E /* SearchCategoryCell.swift in Sources */,
 				685F32C52053915000A2FB89 /* ViewController.swift in Sources */,
 				688C79A62057CD8F00E5B862 /* SearchCollectionViewController.swift in Sources */,
 				685F32C32053915000A2FB89 /* AppDelegate.swift in Sources */,
