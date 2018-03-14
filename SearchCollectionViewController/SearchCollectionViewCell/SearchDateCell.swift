@@ -10,4 +10,7 @@ import UIKit
 
 class SearchDateCell: UICollectionViewCell {
     
+    @IBOutlet weak var dateImage: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    
 }

@@ -24,18 +24,27 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             self.collectionView?.register(UINib(nibName: "SearchCategoryCell", bundle:nil), forCellWithReuseIdentifier: "SearchCell")
+            return 12
         } else {
             self.collectionView?.register(UINib(nibName: "SearchDateCell", bundle:nil), forCellWithReuseIdentifier: "DateCell")
-        }
-        return 12
+            return 5
+        }        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
             return CGSize(width: 100, height: 120)
         } else {
-            return CGSize(width: 375, height: 50)
+            return CGSize(width: 375, height: 60)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        if section == 0 {
+            return 30
+        } else {
+            return 15
+        }        
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

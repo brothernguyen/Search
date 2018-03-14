@@ -10,4 +10,7 @@ import UIKit
 
 class SearchCategoryCell: UICollectionViewCell {
     
+    @IBOutlet weak var deviceImage: UIImageView!
+    @IBOutlet weak var deviceName: UILabel!
+    
 }
