@@ -77,7 +77,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //var cell = UICollectionViewCell()
+        
         if indexPath.section == 0 {
             let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCategoryCell)!
             let device = self.devices[indexPath.row]
