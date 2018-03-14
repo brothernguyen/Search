@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		685F32C32053915000A2FB89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F32C22053915000A2FB89 /* AppDelegate.swift */; };
-		685F32C52053915000A2FB89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F32C42053915000A2FB89 /* ViewController.swift */; };
 		685F32C82053915000A2FB89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685F32C62053915000A2FB89 /* Main.storyboard */; };
 		685F32CA2053915000A2FB89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685F32C92053915000A2FB89 /* Assets.xcassets */; };
 		685F32CD2053915000A2FB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685F32CB2053915000A2FB89 /* LaunchScreen.storyboard */; };
-		685F32D52053916800A2FB89 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F32D42053916800A2FB89 /* SearchViewController.swift */; };
 		688C79A42057C7C900E5B862 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688C79A32057C7C900E5B862 /* SearchHeaderView.swift */; };
 		688C79A62057CD8F00E5B862 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688C79A52057CD8F00E5B862 /* SearchCollectionViewController.swift */; };
 		688D07F02058C80800118A9E /* SearchCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688D07EF2058C80800118A9E /* SearchCategoryCell.swift */; };
@@ -24,12 +22,10 @@
 /* Begin PBXFileReference section */
 		685F32BF2053915000A2FB89 /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		685F32C22053915000A2FB89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		685F32C42053915000A2FB89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		685F32C72053915000A2FB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		685F32C92053915000A2FB89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		685F32CC2053915000A2FB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		685F32CE2053915000A2FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		685F32D42053916800A2FB89 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		688C79A32057C7C900E5B862 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		688C79A52057CD8F00E5B862 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		688D07EF2058C80800118A9E /* SearchCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCell.swift; sourceTree = "<group>"; };
@@ -70,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				685F32C22053915000A2FB89 /* AppDelegate.swift */,
-				685F32C42053915000A2FB89 /* ViewController.swift */,
-				685F32D42053916800A2FB89 /* SearchViewController.swift */,
 				685F32C62053915000A2FB89 /* Main.storyboard */,
 				685F32C92053915000A2FB89 /* Assets.xcassets */,
 				685F32CB2053915000A2FB89 /* LaunchScreen.storyboard */,
@@ -176,10 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				688D07F92058FCE000118A9E /* SearchDateCell.swift in Sources */,
-				685F32D52053916800A2FB89 /* SearchViewController.swift in Sources */,
 				688C79A42057C7C900E5B862 /* SearchHeaderView.swift in Sources */,
 				688D07F02058C80800118A9E /* SearchCategoryCell.swift in Sources */,
-				685F32C52053915000A2FB89 /* ViewController.swift in Sources */,
 				688C79A62057CD8F00E5B862 /* SearchCollectionViewController.swift in Sources */,
 				685F32C32053915000A2FB89 /* AppDelegate.swift in Sources */,
 			);
