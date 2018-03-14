@@ -8,10 +8,22 @@
 
 import UIKit
 
-private let reuseIdentifier = "SearchCell"
-
 class SearchCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+    
+    struct Device {
+        var name: String
+        var img: String
+    }
+    
+    var dates = ["Today", "Yesterday", "Past 7 days", "Past 30 days", "Past 90 days"]
+    var devices = [Device(name: "Lock", img: "lock.png"),
+                   Device(name: "Motion", img: "motion.png"),
+                   Device(name: "Thermostat", img: "thermostat.png"),
+                   Device(name: "2 on", img: "bulb1.png"),
+                   Device(name: "Windows", img: "window1.png"),
+                   Device(name: "Blinds", img: "blinds.png")
+                   ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,10 +36,10 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             self.collectionView?.register(UINib(nibName: "SearchCategoryCell", bundle:nil), forCellWithReuseIdentifier: "SearchCell")
-            return 12
+            return self.devices.count
         } else {
             self.collectionView?.register(UINib(nibName: "SearchDateCell", bundle:nil), forCellWithReuseIdentifier: "DateCell")
-            return 5
+            return self.dates.count
         }        
     }
     
@@ -65,13 +77,22 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = UICollectionViewCell()
+        //var cell = UICollectionViewCell()
         if indexPath.section == 0 {
-            cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCategoryCell)!
+            let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as? SearchCategoryCell)!
+            let device = self.devices[indexPath.row]
+            cell.deviceName.text = device.name
+            cell.deviceImage.image = UIImage(named: device.img)
+            
+            return cell
+            
         } else {
-            cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "DateCell", for: indexPath) as? SearchDateCell)!
-        }        
-        return cell
+            let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "DateCell", for: indexPath) as? SearchDateCell)!
+            let date = self.dates[indexPath.row]
+            cell.dateLabel.text = date
+            
+            return cell
+        }
     }
 
     // MARK: UICollectionViewDelegate

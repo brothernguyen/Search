@@ -13,4 +13,7 @@ class SearchCategoryCell: UICollectionViewCell {
     @IBOutlet weak var deviceImage: UIImageView!
     @IBOutlet weak var deviceName: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
